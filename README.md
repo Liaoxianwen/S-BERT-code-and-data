@@ -4,8 +4,10 @@ S-BERT code and data (Vietnamese typical event sentences and Vietnamese text cla
 Environmental requirements for windows：Anaconda3, Tensorflow 1.12 gpu
 
 Usage：
--- Fine-tune S-BERT on the basis of BERT 
+
   (1) Download the basic BERT from https://github.com/google-research/bert, unzip the compressed package, modify the following code in run_pretraining_model1_v2.py :
+  
+  
           flags.DEFINE_string(
             "bert_config_file", "bert-vietnamese-L_12-H-768/multi_cased_L-12_H-768_A-12/bert_config.json",
             "The config json file corresponding to the pre-trained BERT model. "
@@ -91,8 +93,8 @@ Usage：
                 ....
                 output_predict_file = os.path.join(FLAGS.output_dir, input_filename+".Sent-BERT_results.tsv") # The semantics vector file, one vector per line.
                 
-    =====================
-    This code is currently not particularly friendly. So you need to have TensorFlow 1.x and python programming skills. We will improve the ease of use of this code in the future. 
+=====================
+This code is currently not particularly friendly. So you need to have TensorFlow 1.x and python programming skills. We will improve the ease of use of this code in the future. 
     
        
           
